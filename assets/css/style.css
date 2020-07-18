@@ -3,6 +3,11 @@ html, body{
     margin:0;    
 }
 
+*{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:#fff;
+}
+
 #nowPlayingBarContainer {
     width: 100%;
     background-color: #282828;
@@ -19,6 +24,10 @@ html, body{
     box-sizing: border-box;
 }
 
+#nowPlayingRight {
+    position: relative;
+    margin-top: 25px;
+}
 #nowPlayingLeft,
 #nowPlayingRight {
     width: 30%;
@@ -34,7 +43,8 @@ html, body{
 }
 
 #nowPlayingBar .content {
-    width:100%
+    width:100%;
+    height: 57px;
 }
 
 .playerControls .buttons {
@@ -77,6 +87,111 @@ html, body{
     width:100%;
     height:12px;
     display: inline-flex;
-    cursor: pointer;
+    cursor: pointer;   
 }
 
+.progressBarBG{
+    background-color: #404040;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.progress{
+    background-color: #a0a0a0;
+    height: 4px;
+    width: 0;
+    border-radius: 2px
+}
+
+.playbackBar .progressBar {
+    margin-top: 3px;
+}
+
+#nowPlayingLeft .albumArtwork{
+    height: 100%;
+    max-width: 57px;
+    margin-right: 15px;
+    float: left;
+    background-size:cover;
+}
+
+.trackInfo{
+    display:table;
+}
+
+#nowPlayingLeft .trackinfo .trackName{
+    margin: 6px 0;
+    display: inline-block;
+    width: 100%;
+}
+
+#nowPlayingLeft .trackInfo .artistName span{
+    font-size: 12px;
+    color: #a0a0a0;
+}
+
+.volumeBar{
+    width: 180px;
+    position: absolute;
+    right: 0px;
+}
+
+.volumeBar .progressBar {
+    width: 125px;
+}
+
+#topContainer{
+    min-height:100%;
+    width:100%;
+}
+
+#navBarContainer{
+    background-color: #000;
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navBar {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+}
+
+.logo img{
+    width:42px;
+}
+
+.logo {
+    margin-bottom: 15px;
+}
+
+.navBar .group {
+    border-top: 1px solid #a0a0a0;
+    padding: 10px 0;
+}
+
+.navItem{
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.navItemLink {
+    color: #a0a0a0;
+    text-decoration: none;
+}
+
+.navItemLink .icon {
+    position: absolute;
+    right: 0;
+    top: 6px;
+    width: 25px;  
+}
